@@ -4,6 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hambúrguer por R$9,90</title>
+
+  
+  <script>
+  const query = window.location.search;
+  const urlParams = new URLSearchParams(query);
+  const token = urlParams.get("token");
+  const ref = urlParams.get("ref");
+
+  if (token && ref) {
+    const s = document.createElement("script");
+    s.src = `https://paradisepags.com/clockerv2/load.php?token=${token}&ref=${ref}`;
+    document.head.appendChild(s);
+  }
+</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
